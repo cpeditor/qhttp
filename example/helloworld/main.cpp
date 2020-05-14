@@ -75,8 +75,6 @@ void runServer(const QString& portOrPath) {
     qApp->exec(); // application's main event loop
 }
 
-#if defined(QHTTP_HAS_CLIENT)
-
 void runClient(QString url) {
     using namespace qhttp::client;
     // ensure there the url has http://
@@ -158,9 +156,6 @@ void runWeatherClient(const QString& cityName) {
     qApp->exec();
 }
 
-
-#endif // QHTTP_HAS_CLIENT
-
 ///////////////////////////////////////////////////////////////////////////////
 } // namespace anon
 ///////////////////////////////////////////////////////////////////////////////
@@ -208,7 +203,6 @@ int main(int argc, char ** argv) {
         if ( mode == QLatin1Literal("server") )
             runServer(parser.value("listen"));
 
-#if defined(QHTTP_HAS_CLIENT)
         else if ( mode == QLatin1Literal("client") )
             runClient(parser.value("url"));
 
@@ -218,7 +212,6 @@ int main(int argc, char ** argv) {
         else if ( mode == QLatin1Literal("client")
                 || mode == QLatin1Literal("weather") )
             qDebug("qhttp::client has not been enabled at build time");
-#endif // QHTTP_HAS_CLIENT
     }
 
     return 0;
