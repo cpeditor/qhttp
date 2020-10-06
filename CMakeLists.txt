@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(QHttp LANGUAGES CXX)
+project(QHttp)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -36,9 +36,12 @@ add_library(QHttp STATIC
     src/private/qhttpserverconnection_private.hpp
     src/private/qhttpserverrequest_private.hpp
     src/private/qhttpserverresponse_private.hpp
-    src/private/qsocket.hpp)
+    src/private/qsocket.hpp
 
-include_directories("3rdparty")
+    3rdparty/http-parser/http_parser.c
+    3rdparty/http-parser/http_parser.h
+
+)
 
 target_include_directories(QHttp PUBLIC src)
 target_link_libraries(QHttp PRIVATE Qt5::Network)

@@ -1,11 +1,15 @@
 #include "qhttpabstracts.hpp"
-#include "http-parser/http_parser.h"
+#include "http_parser.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 namespace qhttp {
 ///////////////////////////////////////////////////////////////////////////////
 #if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
 #   error "to compile QHttp classes, Qt 5.0 or later is needed."
+#endif
+
+#ifdef HTTP_STATUS_MAP
+#undef HTTP_STATUS_MAP
 #endif
 
 #define HTTP_STATUS_MAP(XX)                    \
