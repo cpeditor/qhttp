@@ -39,9 +39,8 @@ add_library(QHttp STATIC
     src/private/qsocket.hpp
 
     3rdparty/http-parser/http_parser.c
-    3rdparty/http-parser/http_parser.h
 
 )
-
 target_include_directories(QHttp PUBLIC src)
+target_include_directories(QHttp PUBLIC 3rdparty/http-parser)
 target_link_libraries(QHttp PRIVATE Qt5::Network)
