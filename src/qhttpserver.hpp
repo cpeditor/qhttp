@@ -20,7 +20,7 @@ namespace server {
 ///////////////////////////////////////////////////////////////////////////////
 
 /** The QHttpServer class is a fast, async (non-blocking) HTTP server. */
-class QHTTP_API QHttpServer : public QObject
+class QHttpServer : public QObject
 {
     Q_OBJECT
 

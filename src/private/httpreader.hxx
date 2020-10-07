@@ -46,7 +46,7 @@ public:
         if ( icollectCapacity > 0    &&    newLength > icollectCapacity )
             return false; // the capacity is full
 
-        icollectedData.append(data, length);
+        icollectedData.append(data, static_cast<int>(length));
         return true;
     }
 

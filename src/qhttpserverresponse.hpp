@@ -20,7 +20,7 @@ namespace server {
 /** The QHttpResponse class handles sending data back to the client as a response to a request.
  * @sa QHttpConnection
  */
-class QHTTP_API QHttpResponse : public QHttpAbstractOutput
+class QHttpResponse : public QHttpAbstractOutput
 {
     Q_OBJECT
 

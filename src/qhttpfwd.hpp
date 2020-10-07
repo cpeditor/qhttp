@@ -192,16 +192,6 @@ class QHttpResponsePrivate;
 ///////////////////////////////////////////////////////////////////////////////
 } // namespace client
 ///////////////////////////////////////////////////////////////////////////////
-#ifdef Q_OS_WIN
-#   if defined(QHTTP_EXPORT)
-#       define QHTTP_API __declspec(dllexport)
-#   else
-#       define QHTTP_API __declspec(dllimport)
-#   endif
-#else
-#   define QHTTP_API
-#endif
-
 
 #if QHTTP_MEMORY_LOG > 0
 #   define QHTTP_LINE_LOG fprintf(stderr, "%s(): obj = %p    @ %s[%d]\n",\

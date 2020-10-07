@@ -19,7 +19,7 @@ namespace qhttp {
 ///////////////////////////////////////////////////////////////////////////////
 
 /** a utility class to give the string representation of qhttp types. */
-class QHTTP_API Stringify
+class Stringify
 {
 public:
     /** returns the standard message for an HTTP status code. */
@@ -33,7 +33,7 @@ public:
 
 /** an interface for input (incoming) HTTP packets.
  * server::QHttpRequest or client::QHttpResponse inherit from this class. */
-class QHTTP_API QHttpAbstractInput : public QObject
+class QHttpAbstractInput : public QObject
 {
     Q_OBJECT
 
@@ -118,7 +118,7 @@ public:
 
 /** an interface for output (outgoing) HTTP packets.
  * server::QHttpResponse or client::QHttpRequest inherit from this class. */
-class QHTTP_API QHttpAbstractOutput : public QObject
+class QHttpAbstractOutput : public QObject
 {
     Q_OBJECT
 
